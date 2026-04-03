@@ -56,15 +56,26 @@ npm run build
 项目已配置：
 
 - `base: /json-tool/`
-- `npm run deploy`
+- `.github/workflows/deploy-pages.yml`
 
-如果你使用 `gh-pages` 分支方式发布，可以直接执行：
+推荐使用 GitHub Actions 自动发布。
+
+### 首次配置
+
+1. 推送代码到 GitHub 仓库
+2. 打开仓库设置页
+3. 进入 `Settings > Pages`
+4. 将 `Source` 设置为 `GitHub Actions`
+
+之后每次向 `main` 分支提交并推送，GitHub 都会自动执行构建并重新发布站点。
+
+### 可选的本地发布方式
+
+如果你仍然想继续使用 `gh-pages` 分支方式，也可以执行：
 
 ```bash
 npm run deploy
 ```
-
-如果你使用 GitHub Actions 方式发布，也可以保留当前项目结构，只需要将 `dist/` 作为构建产物发布即可。
 
 ## 主要目录
 
